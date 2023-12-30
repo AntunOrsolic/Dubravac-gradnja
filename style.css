@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background-color: rgb(35, 37, 39);
+}
+
+.flex-container > a {
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 26px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.flex-container > a:hover {
+    color: red;
+}
+
+#logo {
+    height: 70px;
+    padding-top: 10px;
+    padding-right: 600px;
+
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease-in-out;
+}
+
+.main-photo {
+    width: 100%;
+    height: auto;
+}
+
+.main-photo:hover {
+    filter: brightness(30%);
+}
+
+.image-caption {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+    white-space: nowrap; /* Spriječava prelazak teksta u novi red */
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.9s ease-in-out;
+}
+
+.image-container:hover .image-caption {
+    opacity: 1;
+}
+
+#aboutus {
+    display: flex;
+    margin-top: -4px;
+    padding: 50px;
+    background-color:gainsboro;
+}
+
+.aboutus-photo {
+    width: 500px;
+    height: auto;
+}
+
+.aboutus-content {
+    flex: 1; /* Omogućava da se tekst rasteže i zauzima preostali prostor */
+    padding-left: 20px; /* Dodajte padding po potrebi za razmak između slike i teksta */
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: xx-large;
+    margin-top: 10px;
+    color: rgb(35, 37, 39);
+}
+
+.aboutus-txt {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4px;
+    height: 400px;
+    background-color: rgb(35, 37, 39);
+    margin-top: -4px;
+    margin-bottom: 0;
+    padding-bottom: 40px;
+}
+
+.box-item {
+    margin-top: -50px;
+    text-align: center; /* Align text in the center */
+  }
+
+.box1, .box2, .box3 {
+    border: 2px solid darkgrey;
+    width: 320px;
+    height: 214px;
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+}
+
+.text1, .text2, .text3 {
+    color: antiquewhite;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+    height: 600px;
+    background-color: rgb(35, 37, 39);
+    margin-top: -40px;
+    margin-bottom: -16px;
+}
+
+.projects-headline {
+    color: antiquewhite;
+    position: absolute;
+    margin-top: -650px;
+}
+
+footer {
+    background-color: slategray;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-caption {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
