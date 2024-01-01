@@ -2,10 +2,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
 .flex-container {
     display: flex;
+    width: 100%;
+    height: 5.5rem;
     flex-wrap: wrap;
     justify-content: flex-end;
     background-color: rgb(35, 37, 39);
@@ -15,20 +18,25 @@ body {
     color: whitesmoke;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: bold;
-    margin: 10px;
-    padding: 20px;
+    margin: 0.8rem;
+    padding: 1rem;
+    flex-wrap: wrap;
 }
 
 .flex-container > a:hover {
     color: crimson;
 }
 
-#logo {
-    height: 70px;
-    padding-top: 10px;
-    padding-right: 590px;
+.logo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 4em;
+    padding-top: 0.8rem;
+    padding-right: 40%;
 
 }
 
@@ -82,7 +90,7 @@ header{
 }
 
 .aboutus-photo {
-    width: 500px;
+    max-width: 100%;
     height: auto;
 }
 
@@ -253,3 +261,4 @@ footer {
 .footer-link:hover {
     color: crimson;
 }
+
