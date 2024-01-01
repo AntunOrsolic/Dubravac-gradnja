@@ -3,6 +3,7 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    max-width: 1920px;
 }
 
 .flex-container {
@@ -84,8 +85,10 @@ header{
 
 #aboutus {
     display: flex;
+    max-width: 100%;
+    height: auto;
     margin-top: -4px;
-    padding: 50px;
+    padding: 3rem;
     background-color:rgb(111, 128, 144, 0.2)
 }
 
@@ -96,20 +99,20 @@ header{
 
 .aboutus-content {
     flex: 1; /* Omogućava da se tekst rasteže i zauzima preostali prostor */
-    padding-left: 20px; /* Dodajte padding po potrebi za razmak između slike i teksta */
+    padding-left: 2rem; /* Dodajte padding po potrebi za razmak između slike i teksta */
 }
 
 h1 {
     text-transform: uppercase;
-    font-size: xx-large;
-    margin-top: 10px;
+    font-size: 2em;
+    margin-top: 1rem;
     color: rgb(35, 37, 39);
 }
 
 .aboutus-txt {
     text-align: justify;
-    font-size: 20px;
-    line-height: 35px;
+    font-size: 1.2em;
+    line-height: 1.7em;
 }
 
 .box-container {
@@ -119,15 +122,15 @@ h1 {
     align-items: center;
     justify-content: space-around;
     padding: 4px;
-    height: 400px;
+    
     background-color: rgb(35, 37, 39);
     margin-top: -4px;
     margin-bottom: 0;
-    padding-bottom: 40px;
+    
 }
 
 .box-item {
-    margin-top: -50px;
+    
     text-align: center; /* Align text in the center */
   }
 
@@ -262,3 +265,78 @@ footer {
     color: crimson;
 }
 
+/* Stilizacija hamburger ikone */
+.menu-icon {
+    display: none; /* Po defaultu skrijete ikonu na većim ekranima */
+    cursor: pointer;
+    font-size: 1.625rem;
+    color: whitesmoke;
+    margin-right: 1rem; /* Prilagodite razmak prema vašem dizajnu */
+ }
+ 
+ /* Stilizacija za manje ekrane */
+ @media only screen and (max-width: 600px) {
+.flex-container {
+       flex-direction: column;
+       align-items: center; /* Centrira sve elemente */
+    }
+ 
+.menu-icon {
+       display: block; /* Prikazuje ikonu na manjim ekranima */
+    }
+
+#aboutus {
+        flex-direction: column;
+        padding: 1.5rem; /* Prilagodite padding prema potrebi za manje uređaje */
+     }
+  
+.aboutus-content {
+        padding-left: 0; /* Uklonite padding s lijeve strane za manje uređaje */
+     }
+
+.aboutus-photo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem; /* Dodajte razmak ispod slike na manjim ekranima */
+  }
+
+ h1 {
+    font-size: 1.5em; /* Prilagodite veličinu fonta prema potrebi */
+    margin-top: 0.5rem; /* Prilagodite razmak između h1 i teksta */
+    text-align: center;
+  }
+
+ .aboutus-txt {
+    font-size: 0.85em; /* Prilagodite veličinu fonta prema potrebi */
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.4em; /* Prilagodite razmak između redova prema potrebi */
+  }
+
+ .box-container {
+       flex-direction: column; /* Postavi elemente jedan ispod drugog na manjim ekranima */
+       height: auto; /* Automatsko prilagođavanje visine */
+  }
+ 
+ .box-item {
+       margin-top: 0; /* Ukloni negativan margin na manjim ekranima */
+       margin-bottom: 20px; /* Dodaj razmak ispod svakog box-item-a */
+  }
+ 
+ .box1, .box2, .box3 {
+       width: 100%; /* Puna širina na manjim ekranima */
+       margin-bottom: 20px; /* Dodaj razmak ispod svake slike */
+  }
+ 
+    /* Dodajte ostale stilove ili prilagodbe prema potrebi */
+ .flex-container.show-menu {
+        flex-direction: column;
+        background-color: rgb(35, 37, 39); /* Prilagodite boju pozadine prema vašem dizajnu */
+        text-align: center;
+  }
+     
+ .flex-container.show-menu a {
+        margin: 1rem;
+        color: whitesmoke;
+  }
+}

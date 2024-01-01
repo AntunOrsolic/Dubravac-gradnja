@@ -9,6 +9,7 @@
   <body>
     <nav class="flex-container">
       <img class="logo" src="logo_dubravac_bijeli.png" />
+      <div class="menu-icon">&#9776;</div>
       <a href="#aboutus">O nama</a>
       <a href="#services">Usluge</a>
       <a href="#projects">Projekti</a>
@@ -123,10 +124,10 @@
     <h1 class="contact-headline">Kontaktirajte nas</h1>
     <form action="mailto:dbrvkdbrvc@gmail.com" method="post" enctype="text/plain">
       <label for="name">Vaše ime i prezime:</label>
-      <input type="text" id="name" name="name" placeholder="Upišite vaše ime i prezime" required>
+      <input type="text" id="name" name="name" placeholder="Upišite vaše ime i prezime" autocomplete="additional-name" required>
   
       <label for="email">Vaš e-mail:</label>
-      <input type="email" id="email" name="email" placeholder="Upišite vašu e-mail adresu" required>
+      <input type="email" id="email" name="email" placeholder="Upišite vašu e-mail adresu" autocomplete="email" required>
   
       <label for="message">Poruka:</label>
       <textarea id="message" name="message" rows="6" placeholder="Upišite vašu poruku..." required></textarea>
@@ -140,5 +141,15 @@
         <a class="footer-link" href="#">Dubravac gradnja (c)</a> - web dizajn: <a class="footer-link" href="https://www.instagram.com/the.izajner/">TheIzajner</a> 2023.
       </p>
 </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+     var menuIcon = document.querySelector('.menu-icon');
+     var navLinks = document.querySelector('.flex-container');
+
+     menuIcon.addEventListener('click', function () {
+        navLinks.classList.toggle('show-menu');
+     });
+  });
+</script>
   </body>
 </html>
