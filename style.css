@@ -122,15 +122,12 @@ h1 {
     align-items: center;
     justify-content: space-around;
     padding: 4px;
-    
     background-color: rgb(35, 37, 39);
     margin-top: -4px;
     margin-bottom: 0;
-    
 }
 
 .box-item {
-    
     text-align: center; /* Align text in the center */
   }
 
@@ -161,16 +158,12 @@ h1 {
     align-items: center;
     justify-content: space-around;
     padding: 40px;
-    height: 600px;
     background-color: rgb(35, 37, 39);
-    margin-top: -40px;
-    margin-bottom: -16px;
 }
 
 .projects-headline {
     color: antiquewhite;
-    position: absolute;
-    margin-top: -650px;
+    margin-top: -550px;
 }
 
 .projects-headline:hover {
@@ -178,6 +171,30 @@ h1 {
     width: 100%;
     text-align: center;
     letter-spacing: 0.1rem;
+}
+
+.box-item-projects {
+    text-align: center; /* Align text in the center */
+  }
+
+.box1-projects, .box2-projects, .box3-projects {
+    border: 2px solid darkgrey;
+    width: 320px;
+    height: 214px;
+}
+
+.box-projects {
+    height: 100%;
+    width: 100%;
+}
+
+.text1-projects, .text2-projects, .text3-projects {
+    color: antiquewhite;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
 }
 
 .contact-container {
@@ -328,6 +345,53 @@ footer {
        margin-bottom: 20px; /* Dodaj razmak ispod svake slike */
   }
  
+ .projects-container {
+    align-items: flex-start;
+    flex-direction: column; /* Postavi elemente jedan ispod drugog na manjim ekranima */
+    height: auto; /* Automatsko prilagođavanje visine */
+    padding: 20px; /* Prilagodi padding prema potrebi za manje uređaje */
+    margin-top: 0; /* Ukloni negativan margin na manjim ekranima */
+    text-align: center;
+ }
+
+ .projects-headline {
+    margin-top: 10px; /* Prilagodi margine prema potrebi za manje uređaje */
+    order: -1;
+    margin: auto;
+ }
+
+ .box-item-projects {
+    order: 0; /* Resetirajte redoslijed elemenata */
+ }
+
+ .box1-projects, .box2-projects, .box3-projects {
+    width: 100%; /* Puna širina na manjim ekranima */
+    margin-bottom: 20px; /* Dodaj razmak ispod svake slike */
+ }
+
+ .contact-container {
+    height: auto;
+  }
+
+  form {
+    width: 80%; /* Prilagodite željenu širinu */
+  }
+
+  #name, #email {
+    width: 100%; /* Širina 100% za pojedinačna polja */
+  }
+
+  footer {
+    height: 5rem; /* Postavite željenu visinu za mobilne uređaje */
+  }
+
+  .footer-caption {
+    font-size: 0.8rem;
+    text-align: center; /* Centriraj tekst horizontalno */
+    line-height: 10px;
+  }
+}
+ 
     /* Dodajte ostale stilove ili prilagodbe prema potrebi */
  .flex-container.show-menu {
         flex-direction: column;
@@ -339,4 +403,3 @@ footer {
         margin: 1rem;
         color: whitesmoke;
   }
-}
