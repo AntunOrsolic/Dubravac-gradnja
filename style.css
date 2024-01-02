@@ -122,6 +122,7 @@ h1 {
     align-items: center;
     justify-content: space-around;
     padding: 4px;
+    padding-bottom: 60px;
     background-color: rgb(35, 37, 39);
     margin-top: -4px;
     margin-bottom: 0;
@@ -154,30 +155,36 @@ h1 {
 .projects-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+    
     padding: 40px;
+    margin-top: -18px;
     background-color: rgb(35, 37, 39);
 }
 
 .projects-headline {
     color: antiquewhite;
-    margin-top: -550px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .projects-headline:hover {
-    background-color: rgb(107, 43, 43);
+    background-color: rgb(240, 124, 124, 0.3);
     width: 100%;
     text-align: center;
-    letter-spacing: 0.1rem;
 }
 
 .box-item-projects {
-    text-align: center; /* Align text in the center */
-  }
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
 
-.box1-projects, .box2-projects, .box3-projects {
+.box1-projects, .box2-projects, .box3-projects, .box4-projects, 
+.box5-projects, .box6-projects, .box7-projects, .box8-projects {
     border: 2px solid darkgrey;
     width: 320px;
     height: 214px;
@@ -188,7 +195,8 @@ h1 {
     width: 100%;
 }
 
-.text1-projects, .text2-projects, .text3-projects {
+.text1-projects, .text2-projects, .text3-projects, .text4-projects,
+.text5-projects, .text6-projects, .text7-projects, .text8-projects {
     color: antiquewhite;
     font-weight: bolder;
     text-transform: uppercase;
@@ -370,7 +378,8 @@ footer {
     order: 0; /* Resetirajte redoslijed elemenata */
  }
 
- .box1-projects, .box2-projects, .box3-projects {
+ .box1-projects, .box2-projects, .box3-projects, .box4-projects 
+ .box5-projects, .box6-projects, .box7-projects, .box8-projects {
     width: 100%; /* Puna širina na manjim ekranima */
     margin-bottom: 20px; /* Dodaj razmak ispod svake slike */
  }
@@ -409,3 +418,27 @@ footer {
         margin: 1rem;
         color: whitesmoke;
   }
+
+/* Stilizacija za manje ekrane */
+@media only screen and (min-width: 601px) {
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        margin-top: -18px;
+        background-color: rgb(35, 37, 39);
+    }
+
+    .project-row {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .box-item-projects {
+        flex: 0 0 calc(25% - 20px);
+        margin-top: 0;
+    }
+}
